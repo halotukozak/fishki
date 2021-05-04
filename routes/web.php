@@ -21,3 +21,4 @@ Route::get('/add', [\App\Http\Controllers\FishController::class, 'add'])->name('
 Route::post('/add', [\App\Http\Controllers\FishController::class, 'create']);
 
 Route::get('/print/{id}', [\App\Http\Controllers\PackageController::class, 'printPackage'])->name('print');
+Route::get('/test/{id}', [\App\Http\Controllers\PackageController::class, 'printTest'])->name('test');

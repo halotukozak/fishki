@@ -30,4 +30,12 @@ class PackageController extends Controller
             ['pages' => $output,
                 'reverse' => [2, 1, 0, 5, 4, 3, 8, 7, 6, 11, 10, 9, 14, 13, 12]]);
     }
+
+    public function printTest(Request $request)
+    {
+        $all = Package::find($request->id)->fish;
+
+        return view('test', [
+            'all' => $all]);
+    }
 }
