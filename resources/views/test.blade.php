@@ -58,7 +58,7 @@
 <div class="wrapper" style="margin-top: 1mm">
     <ul>
         @foreach ($all as $item)
-            <li style="list-style: none">______________________________{{ $item->pol }}</li>
+            <li style="list-style: none">______________________________{{ $lang == 'pol' ? $item->pol : $item->ang }}</li>
         @endforeach
     </ul>
 </div>

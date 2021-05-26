@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Fish;
 use App\Models\Package;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 
 class PackageController extends Controller
 {
+
     public function printPackage(Request $request)
     {
         $output = collect();
@@ -33,9 +33,9 @@ class PackageController extends Controller
 
     public function printTest(Request $request)
     {
-        $all = Package::find($request->id)->fish;
-
+        $all = Package::find($request->id)->fish->sortBy($request->lang);
         return view('test', [
-            'all' => $all]);
+            'all' => $all,
+            'lang' => $request->lang]);
     }
 }

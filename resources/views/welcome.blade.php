@@ -415,7 +415,27 @@
                     <i class="fas fa-print"></i>
                     <div class="ml-4 text-lg leading-7 font-semibold">
                         <a href="/print/1"
-                           class="underline text-gray-900 dark:text-white">Drukuj 1</a>
+                           class="underline text-gray-900 dark:text-white">Drukuj</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                <div class="flex items-center">
+                    <i class="fas fa-file"></i>
+                    <div class="ml-4 text-lg leading-7 font-semibold">
+                        <a href="test/ang/1"
+                           class="underline text-gray-900 dark:text-white">Test po angielsku</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                <div class="flex items-center">
+                    <i class="fas fa-file"></i>
+                    <div class="ml-4 text-lg leading-7 font-semibold">
+                        <a href="test/pol/1"
+                           class="underline text-gray-900 dark:text-white">Test po polsku</a>
                     </div>
                 </div>
             </div>
