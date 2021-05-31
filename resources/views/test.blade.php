@@ -62,5 +62,6 @@
         @endforeach
     </ul>
 </div>
+</div>
 </body>
 </html>

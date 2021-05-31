@@ -201,6 +201,10 @@
             padding: 10px;
         }
 
+        input:focus-visible {
+            outline-color: white;
+        }
+
         button {
             padding: 20px;
         }
@@ -218,7 +222,7 @@
     class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
     <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
         <div class="grid ">
-            <form action="/add" method="POST">
+            <form action="{{ Request::url() }}" method="POST">
                 @csrf
                 <input type="text" name="ang" placeholder="Po angielsku..." autocomplete="off" autofocus/>
                 <br/>
