@@ -75,7 +75,7 @@
                                         <a href="{{ route('test', ['lang' => 'ang','id' => $package->id]) }}"
                                            class="text-blue-600 hover:text-blue-900">ENG</a>
                                         /
-                                        <a href="{{ route('test', ['lang' => 'pl','id' => $package->id]) }}"
+                                        <a href="{{ route('test', ['lang' => 'pol','id' => $package->id]) }}"
                                            class="text-blue-600 hover:text-blue-900">PL</a>
                                     </td>
                                 </tr
