@@ -9,6 +9,8 @@ class Package extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function fish()
     {
         return $this->hasMany(Fish::class);

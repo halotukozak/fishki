@@ -220,17 +220,21 @@
 <body class="antialiased">
 <div
     class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-        <div class="grid ">
+    <a href="{{ route('index') }}" class="absolute top-0 left-0 text-black text-2xl hover:text-blue-900">
+        Powrót
+        <i class="fas fa-long-arrow-alt-left"></i>
+    </a>
+    <div class="mt-8 dark:bg-gray-800 overflow-hidden sm:rounded-lg">
+        <div class="grid">
             <form action="{{ Request::url() }}" method="POST">
                 @csrf
-                <input type="text" name="ang" placeholder="Po angielsku..." autocomplete="off" autofocus/>
+                <input type="text" name="ang" placeholder="Po angielsku..."
+                       autocomplete="off" autofocus value="{{ old('ang') }}"/>
                 <br/>
-                <input type="text" name="pol" placeholder="Po polsku..." autocomplete="off"/>
+                <input type="text" name="pol" placeholder="Po polsku..." autocomplete="off" value="{{ old('pol') }}"/>
                 <br/>
-                <button type="submit">Potwierdź</button>
+                <button type="submit" @if ($errors->any())class="text-red-500"@endif>Potwierdź</button>
             </form>
-
         </div>
     </div>
 </div>

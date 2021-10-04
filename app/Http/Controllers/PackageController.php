@@ -43,4 +43,18 @@ class PackageController extends Controller
             'all' => $all,
             'lang' => $request->lang]);
     }
+
+    public function showWordbank(Request $request)
+    {
+        $all = Package::find($request->id)->fish->sortBy('pol');
+        return view('wordbank', [
+            'all' => $all,]);
+    }
+
+    public function createPackage(Request $request)
+    {
+        $request->validate(['name' => 'required']);
+        Package::create(['name' => $request->name]);
+        return back();
+    }
 }

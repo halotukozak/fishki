@@ -48,6 +48,10 @@
                                     class="px-6 py-3  text-xs font-medium text-gray-800 uppercase tracking-wider">
                                     Test
                                 </th>
+                                <th scope="col"
+                                    class="px-6 py-3  text-xs font-medium text-gray-800 uppercase tracking-wider">
+                                    Słowniczek
+                                </th>
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200 ">
@@ -78,9 +82,25 @@
                                         <a href="{{ route('test', ['lang' => 'pol','id' => $package->id]) }}"
                                            class="text-blue-600 hover:text-blue-900">PL</a>
                                     </td>
+                                    <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
+                                        <a href="{{ route('wordbank', ['id' => $package->id]) }}"
+                                           class="text-blue-600 hover:text-blue-900"><i
+                                                class="fas fa-book-open"></i></a>
+                                    </td>
                                 </tr
-
                             @endforeach
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+
+                                    <form action="{{ Request::url() }}" method="POST">
+                                        @csrf
+                                        <input type="text" name="name" placeholder="Wpisz nazwę nowej paczki..." autocomplete="off"/>
+                                        <button class="text-green-700 hover:text-green-900" type="submit"><i
+                                                class="fas fa-plus"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

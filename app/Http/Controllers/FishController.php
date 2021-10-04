@@ -10,6 +10,10 @@ class FishController extends Controller
 {
     public function create(Request $request)
     {
+        $request->validate([
+            'ang' => 'required|unique:fish',
+            'pol' => 'required'
+        ]);
         Fish::create([
             'ang' => $request->ang,
             'pol' => $request->pol,

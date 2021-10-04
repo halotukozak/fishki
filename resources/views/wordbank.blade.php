@@ -56,9 +56,15 @@
 </head>
 <body>
 <div class="wrapper" style="margin-top: 1mm">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 gap-x-4">
         @foreach ($all as $item)
-            <div>{{ $lang == 'pol' ? $item->pol : $item->ang }}<hr></div>
+            <div>
+                <div class="flex justify-between">
+                    <span>{{ $item->pol }}</span>
+                    <span>{{$item->ang }}</span>
+                </div>
+                <hr>
+            </div>
         @endforeach
     </div>
 </div>

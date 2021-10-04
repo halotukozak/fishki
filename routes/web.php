@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PackageController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\PackageController::class, 'index'])->name('index');
 
 Route::get('/{package}/add', [\App\Http\Controllers\FishController::class, 'add'])->name('add');
 Route::post('/{package}/add', [\App\Http\Controllers\FishController::class, 'create']);
 
 Route::get('/print/{id}', [\App\Http\Controllers\PackageController::class, 'printPackage'])->name('print');
 Route::get('/test/{lang}/{id}', [\App\Http\Controllers\PackageController::class, 'printTest'])->name('test');
+Route::get('/wordbank/{id}', [\App\Http\Controllers\PackageController::class, 'showWordbank'])->name('wordbank');
+Route::post('/', [\App\Http\Controllers\PackageController::class, 'createPackage'])->name('create');
