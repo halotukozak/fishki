@@ -235,6 +235,16 @@
                 <br/>
                 <button type="submit" @if ($errors->any())class="text-red-500"@endif>Potwierdź</button>
             </form>
+            Ostatnio dodane słowo: <strong>{{ $latest }}</strong>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </div>
     </div>
 </div>

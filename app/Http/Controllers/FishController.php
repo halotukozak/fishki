@@ -11,7 +11,7 @@ class FishController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'ang' => 'required|unique:fish',
+            'ang' => 'required',
             'pol' => 'required'
         ]);
         Fish::create([
@@ -23,7 +23,7 @@ class FishController extends Controller
 
     public function add()
     {
-        return view('add');
+        return view('add')->with(['latest' => Fish::latest()->first()['ang']]);
     }
 
 }
